@@ -1,0 +1,5 @@
+if("${CMAKE_C_COMPILER_ID}" MATCHES "(GNU|Clang|Intel|AppleClang)")
+	add_compile_options(-Wall -Wextra)
+elseif("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC")
+	add_compile_options(-W4)
+endif()
